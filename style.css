@@ -324,10 +324,6 @@ footer {
 
 /*=== For Tablet ===*/
 @media screen and (max-width: 790px) {
-    body {
-        background-color: red;
-    }
-
     .work-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -396,10 +392,8 @@ footer {
     }
 }
 
+/*=== For Phone ===*/
 @media screen and (max-width: 470px) {
-    body {
-        background-color: blue;
-    }
 
     .profile-info h1,
     .profile-contact ul {
@@ -431,7 +425,7 @@ footer {
     }
 
     .work-card {
-        width: 65%;
+        width: 75%;
     }
 
     .work-description {
