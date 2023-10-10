@@ -88,6 +88,7 @@ img {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 2;
     width: 100%;
 }
 
@@ -227,13 +228,15 @@ img {
     line-height: 1.3;
 }
 
-.work-card a:visited, .work-card a:link {
+.work-card a:visited,
+.work-card a:link {
     color: var(--text-color);
 }
 
 .work-card:hover {
     transform: scale(1.02);
 }
+
 
 .work-description p {
     font-size: var(--smaller-size);
@@ -324,6 +327,11 @@ footer {
 
 /*=== For Tablet ===*/
 @media screen and (max-width: 790px) {
+
+    #home {
+        background-position: 0 300px;
+    }
+
     .work-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -394,6 +402,9 @@ footer {
 
 /*=== For Phone ===*/
 @media screen and (max-width: 470px) {
+    #home {
+        background-position: 0 170px;
+    }
 
     .profile-info h1,
     .profile-contact ul {
@@ -419,7 +430,7 @@ footer {
     .work-card h3 {
         font-size: var(--small-size);
     }
-    
+
     .work-description {
         padding: 0.6rem 2rem 0.8rem;
     }
