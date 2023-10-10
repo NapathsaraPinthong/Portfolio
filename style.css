@@ -108,7 +108,7 @@ img {
 #home {
     width: 100%;
     height: 100vh;
-    background: url(/asset/bg_img.png);
+    background-image: url(./asset/bg_img.png);
     background-position: center;
     background-size: contain;
     display: flex;
@@ -227,7 +227,7 @@ img {
     line-height: 1.3;
 }
 
-.work-card a:visited {
+.work-card a:visited, .work-card a:link {
     color: var(--text-color);
 }
 
@@ -416,20 +416,12 @@ footer {
         font-size: var(--smaller-size);
     }
 
-    .work-card p {
-        font-size: 0.625rem;
-    }
-
     .work-card h3 {
         font-size: var(--small-size);
     }
-
-    .work-card {
-        width: 75%;
-    }
-
+    
     .work-description {
-        padding: 0.6rem 1.4rem 0.8rem;
+        padding: 0.6rem 2rem 0.8rem;
     }
 
     .skill-box {
@@ -451,10 +443,6 @@ footer {
 
     .act-box h3 {
         font-size: var(--small-size);
-    }
-
-    .act-box p {
-        font-size: 0.65rem;
     }
 
     .profile-img img {
