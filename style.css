@@ -19,7 +19,7 @@
     --small-size: 1rem;
     --smaller-size: 0.875rem;
 
-    /*=== Fonts Weigth===*/
+    /*=== Fonts Weight===*/
     --font-medium: 500;
     --font-semibold: 600;
     --font-bold: 700;
@@ -188,7 +188,6 @@ img {
     width: 85%;
     margin: 0 auto;
     padding: 2rem 0;
-
 }
 
 #work {
@@ -200,13 +199,14 @@ img {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 3.5rem;
     margin: 2rem 0;
-
+    justify-content: center;
 }
 
 .work-card {
     border-radius: 50px;
     box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.25);
     transition: all .1s;
+    height: fit-content;
 }
 
 .work-card img {
@@ -222,7 +222,7 @@ img {
     background-color: #FFF;
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
-    padding: 1rem 1.5rem 0;
+    padding: 1rem 1.75rem;
     height: 30%;
     line-height: 1.3;
 }
@@ -236,8 +236,8 @@ img {
 }
 
 .work-description p {
-      font-size: var(--smaller-size);
-      margin-top: 0.3rem;
+    font-size: var(--smaller-size);
+    margin-top: 0.3rem;
 }
 
 .work-description h3 {
@@ -285,14 +285,14 @@ img {
 .act-slide {
     display: flex;
     justify-content: center;
+    margin-top: 2rem;
 }
 
 .act-box {
     width: 30rem;
     height: 18rem;
-    margin-top: 1rem;
-    background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.8)),
-                        url(./asset/lifebrary.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)),
+        url(./asset/lifebrary.jpg);
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -300,6 +300,7 @@ img {
     padding: 1rem 1.5rem;
     border-radius: 10px;
     box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.25);
+    background-position: center;
 }
 
 .act-box h3 {
@@ -318,5 +319,151 @@ footer {
     font-size: var(--smaller-size);
     text-align: center;
     padding: 1rem;
-    margin-top: 2rem ;
+    margin-top: 2rem;
+}
+
+/*=== For Tablet ===*/
+@media screen and (max-width: 790px) {
+    body {
+        background-color: red;
+    }
+
+    .work-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 3rem;
+        margin: 2rem 0;
+    }
+
+    .work-card {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .work-card p {
+        font-size: var(--small-size);
+    }
+
+    #work h2 {
+        text-align: center;
+    }
+
+    .profile-info {
+        max-width: 75%;
+    }
+
+    .skill-box p {
+        color: var(--title-color);
+        font-size: var(--smaller-size);
+        margin-top: 0.3rem;
+    }
+
+    .skill-box img {
+        width: 30px
+    }
+
+    .skill-lists {
+        gap: 1rem;
+    }
+
+    .skill-box {
+        width: 6rem;
+    }
+
+    .nav-bar {
+        align-items: center;
+        padding: 1rem 2rem;
+    }
+
+    .nav-bar ul {
+        gap: 1.2rem;
+    }
+
+    .nav-bar a {
+        font-size: var(--small-size);
+    }
+
+    .container {
+        padding: 1.5rem 0;
+    }
+
+    .act-box h3 {
+        font-size: var(--normal-size);
+    }
+
+    .act-box p {
+        font-size: var(--smaller-size);
+    }
+}
+
+@media screen and (max-width: 470px) {
+    body {
+        background-color: blue;
+    }
+
+    .profile-info h1,
+    .profile-contact ul {
+        font-size: var(--h2-size);
+    }
+
+    .profile-description p {
+        font-size: var(--small-size);
+    }
+
+    .profile-img {
+        margin-bottom: 1rem;
+    }
+
+    .nav-bar {
+        padding: 0.7rem 1.7rem;
+    }
+
+    .nav-bar a {
+        font-size: var(--smaller-size);
+    }
+
+    .work-card p {
+        font-size: 0.625rem;
+    }
+
+    .work-card h3 {
+        font-size: var(--small-size);
+    }
+
+    .work-card {
+        width: 65%;
+    }
+
+    .work-description {
+        padding: 0.6rem 1.4rem 0.8rem;
+    }
+
+    .skill-box {
+        width: 4.5rem;
+    }
+
+    .skill-box p {
+        font-size: 0.65rem;
+    }
+
+    footer {
+        font-size: 0.7rem;
+    }
+
+    .skill-lists {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .act-box h3 {
+        font-size: var(--small-size);
+    }
+
+    .act-box p {
+        font-size: 0.65rem;
+    }
+
+    .profile-img img {
+        width: 10rem;
+    }
 }
